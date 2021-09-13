@@ -54,6 +54,14 @@ print(pets["dogs"][2])
 print(pets["fish"][:3]) # string slicing is just like list slicing! Get the first 3 characters of the string 
 # > "dor"
 
+# Make sure you ALWAYS know what keys are available in your dictionary. If you try to do the following, it will fail:
+print(pets["lizards"])
+# Exception!!! - No key named 'lizards' --- or something like that
+
+# To avoid breaking your code by looking up a key that may or may not exist, use the .get() method instead
+print(pets.get("lizards"))
+# > None
+
 # If you ever need to get all of the keys from a dictionary do
 print(pets.keys())
 
@@ -62,6 +70,5 @@ print(pets.values())
 
 # If you want all the keys and the values
 print(pets.items())
-
 
 
