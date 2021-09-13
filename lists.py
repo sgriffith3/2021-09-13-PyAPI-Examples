@@ -69,9 +69,24 @@ sports_cars = ["ferrari", "bugatti", "koenigsegg"]
 
 trucks = ["F150", "Sierra", "Tacoma"]
 
+# It is possible to concatenate lists (butt them together end to end)
 vehicles = sports_cars + trucks
 print(vehicles)
 # ["ferrari", "bugatti", "koenigsegg", "F150", "Sierra", "Tacoma"]
+
+# Remember that the append method adds the entire item to the end of the list
+autos = trucks.append(sports_cars)
+print(autos)
+#      ["F150", "Sierra", "Tacoma",  ["ferrari", "bugatti", "koenigsegg"]]
+# index    0       1          2                      3
+# inner index                            0           1           2
+
+print(autos[3])
+#     ["ferrari", "bugatti", "koenigsegg"]
+# index    0          1           2
+
+print(autos[3][1])
+# "bugatti"
 
 
 
